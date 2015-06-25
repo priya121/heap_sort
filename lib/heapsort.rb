@@ -23,8 +23,15 @@ class Heapsort
                 heapify(array,largest)
             end
         end
-
     end
+    
+    def build_heap(array)
+      array.size.downto(0) do |index|
+        heapify(array,index)
+      end
+      array
+    end
+
 end
 
 

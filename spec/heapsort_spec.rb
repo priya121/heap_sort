@@ -13,6 +13,12 @@ describe '#heap_sort' do
     it 'heapify returns an ordered  array' do
         expect(Heapsort.new.heapify([1,3,20],1)).to eq([20,3,1])
     end
+    it 'heapifys an array of 5' do 
+        expect(Heapsort.new.heapify([2,3,7],1)).to eq([7,3,2])
+    end
+    it 'builds a heap from array of 5' do
+        expect(Heapsort.new.build_heap([2,3,7,9,10])).to eq([])
+    end
 end
 
 
