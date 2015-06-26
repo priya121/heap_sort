@@ -17,7 +17,10 @@ describe '#heap_sort' do
         expect(Heapsort.new.heapify([2,3,7],1)).to eq([7,3,2])
     end
     it 'builds a heap from array of 5' do
-        expect(Heapsort.new.build_heap([2,3,7,9,10])).to eq([])
+        expect(Heapsort.new.build_heap([2,3,7,9,10])).to eq([10,9,7,2,3])
+    end
+    it 'heapsorts an array of 10' do
+       expect(Heapsort.new.build_heap([1,2,3,4,5,6,7,8,9,10])).to eq([10,9,7,8,5,6,3,1,4,2])
     end
 end
 
